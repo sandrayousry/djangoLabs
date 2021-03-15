@@ -1,0 +1,15 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UEF-8">
+    <title>Edit {{ movies.title }}</title>
+</head>
+<body>
+    <form action="{% url "update" movies.id %} method="post" enctype="multipart/form-data" }">
+       {% csrf_token %}
+       {{ form.as_p }}
+        <button type="submit">Edit Movie</button>
+
+    </form>
+</body>
+</html>    
